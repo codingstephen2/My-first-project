@@ -63,9 +63,10 @@ a {
 img {
   width: 100%;
 }
+
 h1 {
   font-size: 48px;
-  color: color: var(--color-text);;
+  color: var(--color-text);;
   line-height: 1.25;
 }
 .purple {
