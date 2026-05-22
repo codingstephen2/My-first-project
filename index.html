@@ -598,6 +598,107 @@
           </div>
         </div>
       </section>
+      <section id="faq">
+  <div class="container">
+    
+    <div class="faq__header">
+      <p class="section__tag">FAQS</p>
+      <h2 class="section__title">
+        You have <span>Questions?</span>
+      </h2>
+      <p class="section__para">
+        Here are some of the most frequently asked questions we receive.
+      </p>
+    </div>
+
+    <div class="faq__list">
+
+      <div class="faq active">
+        <button class="faq__question">
+          What kind of templates can I expect?
+          <span class="faq__icon">−</span>
+        </button>
+
+        <div class="faq__answer">
+          <p>
+            We provide modern landing pages, SaaS templates,
+            startup websites, dashboards, and reusable UI sections.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="faq__question">
+          Are the templates responsive?
+          <span class="faq__icon">+</span>
+        </button>
+
+        <div class="faq__answer">
+          <p>
+            Yes. Every section is fully responsive and optimized
+            for desktop, tablet, and mobile devices.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="faq__question">
+          Can I use this commercially?
+          <span class="faq__icon">+</span>
+        </button>
+
+        <div class="faq__answer">
+          <p>
+            Absolutely. You may use these templates for personal
+            projects, client work, and commercial applications.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="faq__question">
+          Do I need React or Tailwind?
+          <span class="faq__icon">+</span>
+        </button>
+
+        <div class="faq__answer">
+          <p>
+            No. This version is built with plain HTML, CSS,
+            and a tiny bit of JavaScript.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+  const faqs = document.querySelectorAll(".faq");
+
+  faqs.forEach(faq => {
+    const button = faq.querySelector(".faq__question");
+
+    button.addEventListener("click", () => {
+
+      faqs.forEach(item => {
+        if(item !== faq){
+          item.classList.remove("active");
+          item.querySelector(".faq__icon").textContent = "+";
+        }
+      });
+
+      faq.classList.toggle("active");
+
+      const icon = faq.querySelector(".faq__icon");
+
+      icon.textContent =
+        faq.classList.contains("active") ? "−" : "+";
+    });
+  });
+</script>
+
+</body>
       <section id="start">
         <div class="container">
           <div class="row">
